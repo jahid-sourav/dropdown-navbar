@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    vertical-align: middle;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+/* Header Starts Here */
+header{
+    background-color: #002333;
+    padding: 5px 0px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-logo a{
+    display: inline-block;
+}
+.navbar-logo a img{
+    max-width: 60px;
+}
+.navbar-list{
+    display: flex;
+    align-items: center;
+}
+.navbar-list > li{
+    margin-right: 25px;
+    position: relative;
+}
+.navbar-list > li:last-child{
+    margin-right: 0;
+}
+.navbar-list > li > a{
+    display: inline-block;
+    color: #f2f2f2;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    transition: 0.4s all linear;
+}
+.navbar-list > li.active > a,
+.navbar-list > li:hover > a{
+    color: #00ff84;
+}
+.navbar-list > li:hover .dropdown{
+    top: 55px;
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: #ddd;
+    border-radius: 5px;
+    min-width: 230px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s all linear;
+}
+.dropdown li{
+    text-align: center;
+}
+.dropdown li a{
+    display: block;
+    color: #002333;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    padding: 10px;
+    transition: 0.4s all linear;
+}
+.dropdown li:hover a{
+    background-color: #002333;
+    color: #00ff84;
+}
+.dropdown li:last-child:hover a{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.dropdown li:first-child:hover a{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+/* Header Ends Here */
